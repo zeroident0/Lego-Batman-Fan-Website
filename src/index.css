@@ -125,22 +125,22 @@ main {
     @apply 2xl:w-72 3xl:w-80 md:w-60 w-60 absolute xs:top-25 sm:top-20 md:top-80 2xl:top-18 left-1/2 -translate-x-1/2 z-[60];
   }
 
-  .jason {
-    @apply relative z-10 lg:ps-40 2xl:ps-80 ps-10 py-40 mt-60 flex lg:flex-row flex-col justify-between gap-5 w-dvw overflow-x-hidden;
+  .Batman {
+    @apply relative z-10 lg:ps-40 2xl:ps-80 ps-10 py-30 mt-60 flex lg:flex-row flex-col justify-between gap-4 w-dvw overflow-x-hidden;
 
     h1 {
-      @apply text-yellow font-long uppercase text-8xl mb-20;
+      @apply text-yellow font-long uppercase text-8xl mb-10;
     }
 
     h2 {
-      @apply text-pink md:text-5xl text-3xl mb-7 md:pe-20 pe-10;
+      @apply text-blue-100 md:text-5xl text-3xl mb-7 md:pe-20 pe-10;
     }
 
     p {
       @apply text-white md:text-2xl text-lg md:pe-28 pe-14;
     }
 
-    .jason-1 {
+    .batman-1 {
       @apply bg-yellow lg:h-[80vh] w-auto -translate-x-5;
 
       img {
@@ -148,7 +148,7 @@ main {
       }
     }
 
-    .jason-2 {
+    .batman-2 {
       @apply bg-yellow h-[90vh] w-auto md:mt-36 mt-20 -translate-x-5;
 
       img {
@@ -156,7 +156,7 @@ main {
       }
     }
 
-    .jason-3 {
+    .batman-3 {
       @apply bg-yellow h-[50vh] md:w-[60%] -translate-x-5;
 
       img {
@@ -304,7 +304,7 @@ main {
   background: linear-gradient(135deg, #1e2a52 0%, #6e4b91 100%);
 }
 
-.jon-content {
+.batman-content {
   background: radial-gradient(ellipse, #111117 20%, transparent 70%);
 }
 

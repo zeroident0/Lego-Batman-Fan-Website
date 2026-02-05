@@ -12,7 +12,6 @@ const FirstVideo = () => {
         if (!video) return;
 
         const handleLoadedData = () => {
-            // Ensure video is ready
             video.currentTime = 0;
         };
 
@@ -25,39 +24,61 @@ const FirstVideo = () => {
 
     useGSAP(() => {
         gsap.set('.first-vd-wrapper', {
-            marginTop: '-150vh',
+            y: '-150vh',
             opacity: 0,
         });
 
-        const tl = gsap.timeline({
+        // Entrance animation that triggers when section enters viewport
+        const entranceTl = gsap.timeline({
             scrollTrigger: {
                 trigger: '.first-vd-wrapper',
-                start: 'top top',
-                end: '+=200% top',
-                scrub: 1,
-                pin: true,
-                onUpdate: (self) => {
-                    const video = videoRef.current;
-                    if (video && video.duration) {
-                        // Map scroll progress (0 to 1) to video time (0 to duration)
-                        video.currentTime = self.progress * video.duration;
-                    }
-                }
+                start: 'top bottom',
+                end: 'top center',
+                scrub: false,
+                once: true,
             }
         });
 
-        // Start fading in the video wrapper early, overlapping with hero fade-out
-        tl.to('.first-vd-wrapper', {
-            opacity: 1,
-            duration: 1.5,
-            ease: 'power1.inOut',
-        }, 0);
+        // Bring element into view by animating y position
+        entranceTl.to('.first-vd-wrapper', {
+            y: 0,
+            duration: 0.8,
+            ease: 'power2.out',
+        });
 
-        tl.to('.hero-section', {
-            opacity: 0,
-            duration: 1,
+        // Fade in opacity when element is moving into view
+        entranceTl.to('.first-vd-wrapper', {
+            opacity: 1,
+            duration: 0.6,
             ease: 'power1.inOut',
-        }, 0.3);
+        }, '-=0.4');
+
+        // Fade out hero section so video section is clearly visible
+        entranceTl.to('.hero-section', {
+            opacity: 0,
+            duration: 0.4,
+            ease: 'power1.inOut',
+        }, '-=0.3');
+
+        // Video scrubbing ScrollTrigger (separate from entrance)
+        ScrollTrigger.create({
+            trigger: '.first-vd-wrapper',
+            start: 'top top',
+            end: '+=100% top',
+            scrub: 0.5,
+            pin: true,
+            onUpdate: (self) => {
+                const video = videoRef.current;
+                if (video && video.duration) {
+                    // Only advance video after user has arrived (after startAt)
+                    const startAt = 0.25;
+                    const videoProgress = self.progress <= startAt
+                        ? 0
+                        : (self.progress - startAt) / (1 - startAt);
+                    video.currentTime = videoProgress * video.duration;
+                }
+            }
+        });
     }, { scope: containerRef });
     return (
         <section className="first-vd-wrapper" ref={containerRef}>
@@ -67,7 +88,7 @@ const FirstVideo = () => {
                     muted
                     playsInline
                     preload="auto"
-                    src="/video/first-vd.mp4"
+                    src="/video/first-vdi.mp4"
                     className="first-vd" />
             </div>
 
