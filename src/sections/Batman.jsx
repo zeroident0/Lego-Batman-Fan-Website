@@ -16,7 +16,7 @@ const Batman = () => {
             }
         }).to('.first-vd', {
             opacity: 0,
-            duration: 6,
+            duration: 7,
             ease: 'power1.inOut'
         });
 
@@ -24,7 +24,7 @@ const Batman = () => {
             scrollTrigger: {
                 trigger: '.Batman',
                 start: 'top center',
-                end: '80% center',
+                end: '82% center',
                 scrub: 2,
             }, y: -300, duration: 2, ease: 'power1.inOut'
         }
