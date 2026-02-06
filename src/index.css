@@ -69,7 +69,7 @@ main {
   }
 
   .gradient-title {
-    @apply md:text-[8rem] text-[5rem] font-round-bold !font-extrabold uppercase md:leading-[7rem] leading-[4.5rem] text-center bg-gradient-to-r from-yellow-300 via-orange-600 to-orange-400 bg-clip-text text-transparent;
+    @apply md:text-[8rem] text-[5rem] font-round-bold !font-extrabold uppercase md:leading-[7rem] leading-[4.5rem] text-center bg-gradient-to-r from-yellow-300 via-orange-200 to-orange-400 bg-clip-text text-transparent;
   }
 
   .hero-section {
@@ -165,19 +165,19 @@ main {
     }
   }
 
-  .lucia {
+  .robin {
     @apply relative;
   }
 
-  .lucia-life {
+  .robin-life {
     @apply relative z-10 py-40 mt-60 flex lg:flex-row flex-col justify-between gap-5 w-dvw overflow-x-hidden;
 
     h1 {
-      @apply text-yellow font-long uppercase text-8xl mb-20;
+      @apply text-green-100 font-long uppercase text-8xl mb-20;
     }
 
     h2 {
-      @apply text-pink md:text-5xl text-3xl mb-7 md:pe-20 pe-10;
+      @apply text-red-200 md:text-5xl text-3xl mb-7 md:pe-20 pe-10;
     }
 
     p {
@@ -188,7 +188,7 @@ main {
       @apply md:hidden block xl:block;
     }
 
-    .lucia-1 {
+    .robin-1 {
       @apply bg-yellow lg:h-[80vh] w-auto -translate-x-5;
 
       img {
@@ -196,7 +196,7 @@ main {
       }
     }
 
-    .lucia-2 {
+    .robin-2 {
       @apply bg-yellow lg:h-[60vh] lg:w-[70%] w-[80%] md:my-36 my-20 lg:-translate-x-5 translate-x-5;
 
       img {
@@ -204,7 +204,7 @@ main {
       }
     }
 
-    .lucia-3 {
+    .robin-3 {
       @apply bg-yellow lg:h-[90vh] md:w-[60%] -translate-x-5;
 
       img {
@@ -213,7 +213,7 @@ main {
     }
   }
 
-  .lucia-content {
+  .robin-content {
     @apply flex justify-center items-center;
 
     h1 {
@@ -279,8 +279,8 @@ main {
   mask-size: 100% 100%;
 }
 
-.lucia-content h1,
-.lucia-content h2 {
+.robin-content h1,
+.robin-content h2 {
   background-image: radial-gradient(at 80% 40%,
       rgb(255, 238, 0) 0%,
       rgb(255, 106, 0) 50%,
@@ -308,6 +308,6 @@ main {
   background: radial-gradient(ellipse, #111117 20%, transparent 70%);
 }
 
-.lucia-life-content {
+.robin-life-content {
   background: radial-gradient(ellipse, #111117 20%, transparent 70%);
 }

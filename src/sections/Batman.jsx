@@ -11,7 +11,7 @@ const Batman = () => {
             scrollTrigger: {
                 trigger: '.Batman',
                 start: 'top 90%',
-                end: '24% center',
+                end: '45% center',
                 scrub: 2,
             }
         }).to('.first-vd', {
