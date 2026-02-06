@@ -126,7 +126,7 @@ main {
   /* Shared positioning & sizing so both logos always overlap perfectly */
   .hero-section .fake-logo-wrapper,
   .entrance-message .entrance-logo {
-    @apply w-60 md:w-60 2xl:w-72 3xl:w-80 absolute top-55 md:top-45 lg:top-28 xl:top-32 2xl:top-18 left-1/2 -translate-x-1/2 z-[60];
+    @apply w-60 md:w-60 2xl:w-72 3xl:w-80 absolute top-33 md:top-50 lg:top-70 xl:top-32 2xl:top-18 left-1/2 -translate-x-1/2 z-[60];
   }
 
   .Batman {

@@ -8,8 +8,8 @@ export const useMaskSettings = () => {
         return {
             initialMaskPos: "50% 30%",
             initialMaskSize: "3200% 2000%",
-            maskPos: "50% 130%",
-            maskSize: "65% 15%",
+            maskPos: "50% 55%",
+            maskSize: "65% 20%",
         };
     }
 
@@ -17,16 +17,15 @@ export const useMaskSettings = () => {
         return {
             initialMaskPos: "50% 50%",
             initialMaskSize: "2300% 2300%",
-            maskPos: "50% 800%",
-            maskSize: "55% 55%",
+            maskPos: "50% 45%",
+            maskSize: "55% 30%",
         };
     }
 
     return {
         initialMaskPos: "50% 45%",
         initialMaskSize: "2700% 3640%",
-        maskPos: "50% 5000%",
+        maskPos: "50% 28%",
         maskSize: "19% 26%",
-        maskSize: "64% 101%",
     };
 };

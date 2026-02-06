@@ -14,7 +14,7 @@ const ComingSoon = () => {
 
                 <div className="flex-center gap-10">
                     <img src="/images/ps-logo.svg" alt="" className="md:w-32 w-18" />
-                    <img src="/images/x-logo.svg" alt="" className="md:w-52 w-23" />
+                    <img src="/images/x-logo.svg" alt="" className="md:w-54 w-24" />
                     <img src="/images/steam-logo.svg" alt="" className="md:w-26 w-18" />
 
 
