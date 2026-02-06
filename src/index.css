@@ -69,7 +69,7 @@ main {
   }
 
   .gradient-title {
-    @apply md:text-[8rem] text-[5rem] font-round-bold !font-extrabold uppercase md:leading-[7rem] leading-[4.5rem] text-center bg-gradient-to-r from-yellow-300 via-orange-200 to-orange-400 bg-clip-text text-transparent;
+    @apply md:text-[8rem] text-[5rem] font-round-bold !font-extrabold uppercase md:leading-[7rem] leading-[4.5rem] text-center bg-gradient-to-r from-yellow-300 via-orange-200 to-yellow-300 bg-clip-text text-transparent;
   }
 
   .hero-section {
@@ -77,6 +77,10 @@ main {
 
     .scale-out {
       @apply w-full h-full object-cover object-center md:scale-125;
+    }
+
+    .mask-logo {
+      @apply pointer-events-none;
     }
 
     .title-logo {
@@ -88,11 +92,11 @@ main {
     }
 
     .play-img {
-      @apply rounded-full md:size-28 size-20 bg-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center;
+      @apply rounded-full md:size-28 size-20 bg-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center cursor-pointer z-[90];
     }
 
     .fake-logo-wrapper {
-      @apply z-[60];
+      @apply z-[60] pointer-events-none;
     }
 
     .overlay-logo {
@@ -108,7 +112,7 @@ main {
   }
 
   .entrance-message {
-    @apply absolute inset-0 w-full h-dvh overflow-hidden z-20 opacity-100;
+    @apply absolute inset-0 w-full h-dvh overflow-hidden z-20 opacity-100 pointer-events-none;
 
     .entrance-logo {
       /* styles shared with the fake logo wrapper to keep them perfectly aligned */
@@ -181,7 +185,7 @@ main {
     }
 
     p {
-      @apply text-white md:text-2xl text-lg md:pe-28 pe-14;
+      @apply text-white md:text-2xl text-lg md:pe-28 pe-14 pb-2;
     }
 
     p:last-of-type {
@@ -226,14 +230,19 @@ main {
   }
 
   .post-card {
-    @apply relative flex justify-center items-center pb-80 shadow-2xl;
+    @apply relative flex justify-center items-center pb-20 shadow-2xl;
 
     .animated-gradient-bg {
       @apply absolute w-full md:h-[200vh] h-[220vh] left-0 xl:-bottom-1/2 md:-bottom-5/6;
     }
 
+    .post-card-container {
+      @apply xl:mx-56 md:mx-12 mx-5 xl:h-[85vh] md:h-[40vh] h-[30vh] w-full relative;
+      perspective: 1000px;
+    }
+
     .post-card-wrapper {
-      @apply xl:mx-56 md:mx-12 mx-5 xl:h-[85vh] md:h-[40vh] h-[30vh] w-full flex justify-center items-center overflow-hidden relative;
+      @apply w-full h-full flex justify-center items-center overflow-hidden relative shadow-2xl;
 
       video {
         @apply w-full h-full 2xl:scale-x-105 object-cover;
@@ -301,7 +310,7 @@ main {
 }
 
 .animated-gradient-bg {
-  background: linear-gradient(135deg, #1e2a52 0%, #6e4b91 100%);
+  background: linear-gradient(135deg, #1e2a52 0%, #5f6974 100%);
 }
 
 .batman-content {

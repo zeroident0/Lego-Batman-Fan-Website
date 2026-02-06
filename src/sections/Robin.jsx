@@ -53,7 +53,7 @@ const Robin = () => {
                 <div className="max-w-xl lg:ps-32 ps-10">
                     <h1>Robin</h1>
                     <h2>You don’t have to do this alone. You never did.</h2>
-                    <p>I want him. I want the man who took my family from me. I want him, and I’ll make him pay.</p>
+                    <p>I want him. I want the man who took my family from me. I want him, and I’ll make him pay.<br /></p>
                 </div>
 
                 <div className="robin-1" >
@@ -61,7 +61,7 @@ const Robin = () => {
                     />
                 </div>
 
-                <p className="max-w-xl lg:ps-32 ps-10">I am not your soldier, Father. I fight because I choose to, because it is right, because Gotham needs protecting, and because I will not let my life be decided by rage or by anyone else.</p>
+                <p className="max-w-xl lg:ps-32 ps-10"><br />I am not your soldier, Father. I fight because I choose to, because it is right, because Gotham needs protecting, and because I will not let my life be decided by rage or by anyone else.</p>
             </div>
         </section>
     )
