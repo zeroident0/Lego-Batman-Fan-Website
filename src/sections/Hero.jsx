@@ -68,11 +68,11 @@ const Hero = () => {
                         />
 
 
-                        <img
+                        {/* <img
                             src="/images/watch-trailer.png"
                             alt="trailer"
                             className="trailer-logo fade-out"
-                        />
+                        /> */}
                     </>
                 ) : (
                     <div className="w-full h-full">
