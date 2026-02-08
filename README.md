@@ -2,7 +2,7 @@
 
 A visually stunning, interactive fan website dedicated to the legendary Lego Batman. Built with a focus on high-end aesthetics, smooth animations, and a "premium" feel.
 
-![Lego Batman Banner](public/logo.png) 
+![Lego Batman Banner](public/images/logo.png) 
 
 ## - Experience the Dark Knight
 This project is an exploration of modern web design, featuring:
